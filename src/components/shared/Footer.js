@@ -2,9 +2,6 @@ import React from 'react';
 
 // Image
 import img2 from "../../assets/images/img2.png";
-import instagram from "../../assets/images/instagram-brands.svg";
-import telegram from "../../assets/images/paper-plane-solid.svg";
-import whatsApp from "../../assets/images/whatsapp-brands.svg";
 import wave from "../../assets/images/wave.svg"
 
 // Styles
@@ -47,13 +44,13 @@ const Footer = () => {
                     </div>
                     <div className={styles.socialIcons}>
                         <a href="#">
-                            <i class="fa-brands fa-instagram text-light"></i>
+                            <i className="fa-brands fa-instagram text-light"></i>
                         </a>
                         <a href="#">
-                            <i class="fa-solid fa-paper-plane text-light"></i>
+                            <i className="fa-solid fa-paper-plane text-light"></i>
                         </a>
                         <a href="#">
-                            <i class="fa-brands fa-whatsapp text-light"></i>
+                            <i className="fa-brands fa-whatsapp text-light"></i>
                         </a>
                     </div>
                 </div>
@@ -61,7 +58,7 @@ const Footer = () => {
             <div className={styles.bottomFooter}>
                 <img className={styles.waveFooter} src={wave} alt="wave footer" />
                 <span className={styles.toUp} onClick={upHandler}>
-                    <i className={styles.iconTop} class="fa-solid fa-chevron-up"></i>
+                    <i className={styles.iconTop} className="fa-solid fa-chevron-up"></i>
                 </span>
             </div>
         </div>

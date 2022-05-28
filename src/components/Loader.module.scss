@@ -1,0 +1,13 @@
+@import "../scss/mixins";
+@import "../scss/variables";
+
+.container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .spinner {
+        background-color: $textColor;
+    }
+}

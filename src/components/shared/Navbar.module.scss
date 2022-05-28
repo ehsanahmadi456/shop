@@ -3,7 +3,6 @@
 
 .container {
   position: sticky;
-  background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(18px);
   top: 0;
   padding: 7px 20px;
@@ -18,9 +17,6 @@
   width: 100%;
   height: 100%;
   padding: 0 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .headerLeft {
@@ -34,10 +30,10 @@
   }
 }
 
-.headerRight {
-  height: 100%;
-  display: flex;
-  align-items: center;
+.navbarCollapse {
+  background-color: rgba(248, 249, 250, 0.8);
+  backdrop-filter: blur(50px);
+  border-radius: 10px;
 }
 
 .listNavBar {
@@ -67,5 +63,20 @@
   .itemNavBar:hover::before {
     opacity: 1;
     width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbarCollapse {
+    padding: 7px 0;
+  }
+  
+  .listNavBar li {
+    margin: 5px 0;
+  }
+
+  .listNavBar .itemNavBar:hover::before {
+    opacity: 1;
+    width: 20%;
   }
 }

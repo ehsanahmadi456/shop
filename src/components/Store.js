@@ -5,21 +5,24 @@ import { ProductsContext } from '../context/ProductContextProvider';
 
 // Components
 import Product from './shared/Product';
+import Loader from './Loader';
 
 // Styles
 import styles from "./Store.module.scss";
 
 const Store = () => {
 
-    const products = useContext(ProductsContext)
+    const products = useContext(ProductsContext);
 
     return (
         <div className={styles.container}>
             {
+                products.length ?
                 products.map(product => <Product
                         key={product.id}
                         productData={product}
                     />)
+                : <Loader />
             }
         </div>
     );
