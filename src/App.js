@@ -9,6 +9,10 @@ import Home from './components/Home';
 function App() {
   return (
     <ProductContextProvider>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/*" element={<Navigate to="/home" />} />
+      </Routes>
     </ProductContextProvider>
   );
 }
