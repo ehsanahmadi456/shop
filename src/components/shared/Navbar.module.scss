@@ -7,10 +7,11 @@
   backdrop-filter: blur(18px);
   top: 0;
   padding: 7px 20px;
-  height: 65px;
+  height: 85px;
   display: flex;
   align-items: center;
   box-shadow: 0px 5px 24px rgba(149, 157, 165, 0.4);
+  z-index: 10;
 }
 
 .header {
@@ -41,6 +42,7 @@
 
 .listNavBar {
   list-style-type: none;
+  margin-bottom: 0;
   display: flex;
 
   .itemNavBar {

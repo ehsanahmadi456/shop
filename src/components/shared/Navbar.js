@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Styles
 import styles from "./Navbar.module.scss";
@@ -15,11 +16,11 @@ const Navbar = () => {
                 </div>
                 <div className={styles.headerRight}>
                     <ul className={styles.listNavBar}>
-                        <li><a className={styles.itemNavBar} href="#">SignUp</a></li>
-                        <li><a className={styles.itemNavBar} href="#">Profile</a></li>
-                        <li><a className={styles.itemNavBar} href="#">Favorite</a></li>
-                        <li><a className={styles.itemNavBar} href="#">Products</a></li>
-                        <li><a className={styles.itemNavBar} href="#">Home</a></li>
+                        <li><Link className={styles.itemNavBar} to="/home">SignUp</Link></li>
+                        <li><Link className={styles.itemNavBar} to="/profile">Profile</Link></li>
+                        <li><Link className={styles.itemNavBar} to="/favorite">Favorite</Link></li>
+                        <li><Link className={styles.itemNavBar} to="/products">Products</Link></li>
+                        <li><Link className={styles.itemNavBar} to="/home">Home</Link></li>
                     </ul>
                 </div>
             </div>
