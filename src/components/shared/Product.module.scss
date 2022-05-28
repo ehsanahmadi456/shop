@@ -1,0 +1,59 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.container {
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 0 6px 50px;
+    transition: .3s;
+
+    .cardImage {
+        width: 230px;
+        height: 200px;
+        padding: 0 10px
+    }
+
+    h3 {
+        @include textStyle(1.1em, $secondaryTextColor, 700);
+        text-align: left;
+        margin: 25px 20px 15px;
+        font-size: 1.1rem;
+    }
+
+    p {
+        @include textStyle(1em, $secondaryTextColor, 500);
+        margin: 5px 20px;
+    }
+}
+
+.container:hover {
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, .1);
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px 15px;
+
+    .details {
+        text-decoration: none;
+        @include textStyle(1.1em, $textColor, 500)
+    }
+
+    .counterBtn button {
+        all: unset;
+        background-color: $textColor;
+        padding: 4px 10px;
+        border-radius: 5px;
+        @include textStyle(1em, #fff, 500);
+        transition: .4s;
+        cursor: pointer;
+    }
+
+    .counterBtn button:hover {
+        background-color: $hoverTextColor;
+    }
+}
