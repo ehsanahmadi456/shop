@@ -29,7 +29,7 @@ const Navbar = () => {
                                 <Link className={`nav-link ${styles.itemNavBar}`} to="/favorite">Favorite</Link>
                             </li>
                             <li className={`nav-item`}>
-                                <Link className={`nav-link ${styles.itemNavBar}`} to="/products">Products</Link>
+                                <Link className={`nav-link ${styles.itemNavBar}`} to="/cart">Products</Link>
                             </li>
                             <li className={`nav-item`}>
                                 <Link className={`nav-link ${styles.itemNavBar}`} to="/home">Home</Link>

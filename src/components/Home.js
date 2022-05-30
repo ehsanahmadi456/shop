@@ -9,10 +9,8 @@ import Main from './shared/Main';
 const Home = () => {
     return (
         <div>
-            <Navbar />
             <Store />
             <Main />
-            <Footer />
         </div>
     );
 };
