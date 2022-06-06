@@ -18,4 +18,9 @@ const quantityCount = (state, id) => {
     }
 }
 
-export {shorten, isInCart, quantityCount};
+const isInHeart = (state, id) => {
+    const result = !!state.selectedItems.find(item => item.id === id)
+    return result;
+}
+
+export {shorten, isInCart, quantityCount, isInHeart};
