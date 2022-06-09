@@ -105,6 +105,14 @@
       margin: 20px 7px 0;
       background-color: $textColor;
     }
+
+    .socialIcons img {
+      cursor: pointer !important;
+    }
+
+    .socialIcons img:nth-child(1) {
+      height: 20px;
+    }
   }
 }
 

@@ -1,11 +1,16 @@
 import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 
+// FontAwesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+
 // Functions
 import { shorten, isInCart, quantityCount, isInHeart } from '../../helpers/functions';
 
 // Icons
-import trashIcon from "../../assets/icons/trash.svg"
+import trashIcon from "../../assets/icons/trash.svg";
+import heart from "../../assets/icons/heart.svg";
 
 // Styles
 import styles from "./Product.module.scss"
@@ -24,11 +29,11 @@ const Product = ({productData}) => {
             <div className={styles.cardHeart}>
                 {
                     !isInHeart(state2, productData.id) &&
-                    <i onClick={() => dispatch2({type: "ADD_ITEM", payload: productData})} className="fa-regular fa-heart"></i>
+                    <img onClick={() => dispatch2({type: "ADD_ITEM", payload: productData})} src={heart} className={styles.heartThin} />
                 }
                 {
                     isInHeart(state2, productData.id) &&
-                    <i onClick={() => dispatch2({type: "REMOVE_ITEM", payload: productData})} className="fa-solid fa-heart"></i>
+                    <FontAwesomeIcon onClick={() => dispatch2({type: "REMOVE_ITEM", payload: productData})} icon={faHeart} color='#ff3f16' className={styles.heartSolid} />
                 }
             </div>
             <img className={styles.cardImage} src={productData.image} alt="product" />

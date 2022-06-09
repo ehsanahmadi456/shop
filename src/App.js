@@ -11,7 +11,10 @@ import Footer from "./components/shared/Footer";
 import ProductsDetails from "./components/ProductsDetails"
 import CartContextProvider from './context/CartContextProvider';
 import ShopCart from './components/ShopCart';
-import Like from "./components/Like"
+import Like from "./components/Like";
+import Profile from "./components/shared/Profile";
+import SignUp from './components/shared/SignUp';
+import Login from './components/shared/Login';
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/cart" element={<ShopCart />} />
               <Route path="/favorite" element={<Like />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/*" element={<Navigate to="/home" />} />
             </Routes>
           <Footer />

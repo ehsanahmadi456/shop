@@ -1,0 +1,294 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif !important;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+  min-height: 670px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .available {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: -10px 0 0 10px;
+  }
+
+  .receiveLink,
+  .acceptLink {
+    all: none;
+    border: none;
+    @include textStyle(1em, #fff, 400);
+    border-radius: 20px;
+  }
+
+  .receiveLink {
+    background: linear-gradient(90deg, rgb(240, 149, 64), rgb(255, 68, 99));
+  }
+
+  .receiveLink:hover {
+    background: linear-gradient(140deg, rgb(245, 140, 42), rgb(255, 37, 74));
+  }
+
+  .acceptLink {
+    background: linear-gradient(90deg, rgb(70, 204, 92), rgb(37, 245, 37));
+  }
+
+  .acceptLink:hover {
+    background: linear-gradient(90deg, rgb(50, 235, 81), rgb(7, 255, 7));
+  }
+
+  .backgroundImage1,
+  .backgroundImage2,
+  .backgroundImage3 {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .backgroundImage1 {
+    height: 300px;
+    width: 300px;
+    top: 64%;
+    right: 6%;
+  }
+
+  .backgroundImage2 {
+    height: 300px;
+    width: 300px;
+    top: 30%;
+    right: 10%;
+  }
+
+  .backgroundImage3 {
+    height: 300px;
+    width: 300px;
+    top: 60%;
+    right: 25%;
+  }
+
+  .profile,
+  .history,
+  .connection {
+    border-radius: 15px;
+    min-width: 400px;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    margin: 20px;
+    height: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+
+.profile {
+  padding: 0 30px;
+
+  .profileUser {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 250px;
+    }
+  }
+
+  .aboutUser {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+
+    p:first-child {
+      @include textStyle(1.1em, #222, 500);
+    }
+
+    p:last-child {
+      @include textStyle(1em, #777, 400);
+    }
+  }
+
+  .numberUser {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #9999;
+
+    p {
+      @include textStyle(1em, #444, 400);
+    }
+  }
+
+  .emailUser {
+    @include textStyle(1em, #444, 400);
+    padding: 0 0 15px 0;
+    margin-top: 20px;
+    border-bottom: 1px solid #9999;
+  }
+
+  .smsProfile {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+  }
+
+  .smsProfile p {
+    @include textStyle(1.1em, $textColor, 500);
+  }
+
+  .footerProfile {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttonProfile {
+    all: none;
+    background: linear-gradient(90deg, rgb(240, 149, 64), rgb(255, 68, 99));
+    border: none;
+    padding: 8px 35px;
+    @include textStyle(1em, #fff, 400);
+    border-radius: 20px;
+    margin: 10px 0;
+  }
+
+  .buttonProfile:hover {
+    background: linear-gradient(140deg, rgb(245, 140, 42), rgb(255, 37, 74));
+  }
+}
+
+.history {
+  .headHistory {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.6);
+    padding: 30px 30px 0;
+
+    p {
+      @include textStyle(1.1em, #444, 500);
+    }
+
+    button {
+      border: none;
+      @include textStyle(0.8em, #777, 600);
+      padding: 4px 25px;
+      margin-top: -5%;
+      border-radius: 20px;
+    }
+  }
+
+  .firstInformation {
+    padding: 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+
+    .items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        color: #777;
+      }
+
+      div:first-child {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .headItems {
+        @include textStyle(0.9em, #333, 400);
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      .mainItems {
+        @include textStyle(0.8em, #555, 400);
+      }
+
+      .receiveLink {
+        padding: 4px 25px;
+      }
+
+      .receiveLink a {
+        text-decoration: none;
+        @include textStyle(1em, #fff, 400);
+      }
+
+      .acceptLink {
+        padding: 4px 25px;
+      }
+
+      .acceptLink a {
+        text-decoration: none;
+        @include textStyle(1em, #fff, 400);
+      }
+    }
+  }
+}
+
+.connection {
+  .headInformation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.6);
+    padding: 30px 30px 0;
+
+    p {
+      @include textStyle(1.1em, #444, 500);
+    }
+
+    button {
+      border: none;
+      @include textStyle(0.8em, #777, 600);
+      padding: 4px 25px;
+      margin-top: -5%;
+      border-radius: 20px;
+    }
+  }
+
+  .mainInformation {
+    padding: 30px 30px 10px;
+  }
+
+  .itemMainInformation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 13px 0;
+
+    .leftItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        margin-left: 10px;
+        @include textStyle(0.9em, #777, 400);
+      }
+    }
+
+    .acceptLink {
+      padding: 3px 20px;
+      cursor: pointer;
+    }
+
+    .receiveLink {
+      padding: 3px 20px;
+      cursor: pointer;
+    }
+  }
+}

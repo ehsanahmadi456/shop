@@ -22,7 +22,7 @@ const Like = () => {
                     key={item.id}
                     data={item}
                     />) :
-                <div className={styles.alertFavorite}>
+                    <div className={styles.alertFavorite}>
                     <h3>You dont have favorite products</h3>
                     <Link to="/home" className={styles.linkAlert}>Go to shop</Link>
                 </div>

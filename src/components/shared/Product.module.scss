@@ -23,11 +23,14 @@
     border-bottom-right-radius: 50%;
     background-color: rgba(244,95,63, .4);
     backdrop-filter: blur(10px);
+    margin-left: -75px;
+    transform: rotate(90deg);
+    transition: .3s;
   }
 
-  .cardHeart i {
-    color: #ff3f16;
+  .cardHeart img {
     cursor: pointer;
+    height: 30px;
   }
 
   .cardImage {
@@ -52,6 +55,11 @@
 
 .container:hover {
   box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container:hover .cardHeart {
+  margin-left: 0px;
+  transform: rotate(0);
 }
 
 .footerContainer {

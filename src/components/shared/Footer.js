@@ -1,8 +1,18 @@
 import React from 'react';
 
+// FontAwesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram } from '@fortawesome/fontawesome-svg-core';
+
 // Image
 import img2 from "../../assets/images/img2.png";
-import wave from "../../assets/images/wave.svg"
+import wave from "../../assets/images/wave.svg";
+
+// Svg
+import instagram from "../../assets/icons/instagram.svg";
+import paperPLane from "../../assets/icons/paper-plane.svg";
+import whatsApp from "../../assets/icons/whatsapp.svg";
 
 // Styles
 import styles from "./Footer.module.scss";
@@ -44,13 +54,13 @@ const Footer = () => {
                     </div>
                     <div className={styles.socialIcons}>
                         <a href="#">
-                            <i className="fa-brands fa-instagram text-light"></i>
+                            <img src={instagram} />
                         </a>
                         <a href="#">
-                            <i className="fa-solid fa-paper-plane text-light"></i>
+                            <img src={paperPLane} />
                         </a>
                         <a href="#">
-                            <i className="fa-brands fa-whatsapp text-light"></i>
+                            <img src={whatsApp} />
                         </a>
                     </div>
                 </div>
@@ -58,7 +68,7 @@ const Footer = () => {
             <div className={styles.bottomFooter}>
                 <img className={styles.waveFooter} src={wave} alt="wave footer" />
                 <span className={styles.toUp} onClick={upHandler}>
-                    <i className={styles.iconTop} className="fa-solid fa-chevron-up"></i>
+                    <FontAwesomeIcon className={styles.iconTop} icon={faAngleUp} />
                 </span>
             </div>
         </div>
