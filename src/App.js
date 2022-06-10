@@ -1,15 +1,15 @@
-import { Route, Routes, Navigate } from 'react-router';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 // Context
 import ProductContextProvider from './context/ProductContextProvider';
 import HeartContextProvider from './context/HeartContextProvider';
+import CartContextProvider from './context/CartContextProvider';
 
 // Components
 import Home from './components/Home';
 import Navbar from "./components/shared/Navbar";
 import Footer from "./components/shared/Footer";
-import ProductsDetails from "./components/ProductsDetails"
-import CartContextProvider from './context/CartContextProvider';
+import ProductsDetails from "./components/ProductsDetails";
 import ShopCart from './components/ShopCart';
 import Like from "./components/Like";
 import Profile from "./components/shared/Profile";
@@ -23,7 +23,7 @@ function App() {
         <HeartContextProvider>
           <Navbar />
             <Routes>
-            <Route path="/home/:id" element={<ProductsDetails />} />
+              <Route path="/home/:id" element={<ProductsDetails />} />
               <Route path="/home" element={<Home />} />
               <Route path="/cart" element={<ShopCart />} />
               <Route path="/favorite" element={<Like />} />

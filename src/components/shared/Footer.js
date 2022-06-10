@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -51,15 +50,15 @@ const Footer = () => {
                 <div className={styles.footerImage}>
                     <img className={styles.securityImage} src={img2} alt="footer img" />
                     <div className={styles.socialIcons}>
-                        <Link href="#">
+                        <div>
                             <img src={instagram} alt="instagram" />
-                        </Link>
-                        <Link href="#">
+                        </div>
+                        <div>
                             <img src={paperPLane} alt="paperPLane" />
-                        </Link>
-                        <Link href="#">
+                        </div>
+                        <div>
                             <img src={whatsApp} alt="whatsApp" />
-                        </Link>
+                        </div>
                     </div>
                 </div>
             </div>
