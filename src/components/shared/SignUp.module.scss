@@ -18,7 +18,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   position: relative;
-  
+
   p,
   label {
     @include textStyle(1.1em, #fff, 400);
@@ -29,7 +29,6 @@ body {
     margin: 0 10px;
   }
 }
-
 
 .signUp {
   background: rgba(255, 255, 255, 0.31);
@@ -135,7 +134,7 @@ body {
     border: none;
     padding: 7px 8px;
     margin: 0 10px;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   .linkLogin {
@@ -150,5 +149,36 @@ body {
 
   .linkLogin:hover {
     background-color: #ff947c;
+  }
+}
+
+@media (max-width: 992px) {
+  .signUp {
+    width: 430px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .form .formInput {
+      width: 365px;
+    }
+
+    .form .uncompleted {
+      width: 365px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .signUp {
+    width: 335px;
+
+    .form .formInput {
+      width: 275px;
+    }
+
+    .form .uncompleted {
+      width: 275px;
+    }
   }
 }

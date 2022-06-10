@@ -10,18 +10,20 @@
 .container {
   background-color: rgb(235, 236, 244);
   position: relative;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
 .topFooter {
-  max-width: 1300px;
+  max-width: 1500px;
   height: fit-content;
   background-color: rgb(235, 236, 244);
   display: flex;
   flex-wrap: wrap;
+  padding: 40px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 80px 20px 0;
 
   h3 {
     @include textStyle(1.3em, rgb(43, 44, 45), 700);
@@ -34,7 +36,8 @@
   }
 
   .aboutUs {
-    width: 300px;
+    width: 250px;
+    margin: 50px 0;
     display: flex;
     flex-direction: column;
 
@@ -44,7 +47,8 @@
   }
 
   .communic {
-    width: 300px;
+    width: 250px;
+    margin: 50px 0;
     display: flex;
     flex-direction: column;
   }
@@ -61,7 +65,8 @@
   }
 
   .services {
-    width: 300px;
+    width: 250px;
+    margin: 50px 0;
     list-style-type: none;
 
     ul {
@@ -78,12 +83,14 @@
 
   .footerImage {
     margin-right: 20px;
-    width: 300px;
+    margin: 50px 0;
+    width: 250px;
     display: flex;
     flex-direction: column;
 
-    .trustImage {
-      width: 300px;
+    .securityImage {
+      width: 220px;
+      height: 100px;
     }
 
     .socialIcons {

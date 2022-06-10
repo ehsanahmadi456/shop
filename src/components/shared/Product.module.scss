@@ -21,11 +21,11 @@
     width: 75px;
     height: 75px;
     border-bottom-right-radius: 50%;
-    background-color: rgba(244,95,63, .4);
+    background-color: rgba(244, 95, 63, 0.4);
     backdrop-filter: blur(10px);
     margin-left: -75px;
     transform: rotate(90deg);
-    transition: .3s;
+    transition: 0.3s;
   }
 
   .cardHeart img {
@@ -109,5 +109,12 @@
 
   .counterBtn button:hover {
     background-color: $hoverTextColor;
+  }
+}
+
+@media (max-width: 997px) {
+  .cardHeart {
+    margin-left: 0 !important;
+    transform: rotate(0) !important;
   }
 }

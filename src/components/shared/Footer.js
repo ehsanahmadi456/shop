@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram } from '@fortawesome/fontawesome-svg-core';
 
 // Image
 import img2 from "../../assets/images/img2.png";
@@ -49,19 +49,17 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className={styles.footerImage}>
-                    <div className={styles.trustImage}>
-                        <img src={img2} alt="footer img" />
-                    </div>
+                    <img className={styles.securityImage} src={img2} alt="footer img" />
                     <div className={styles.socialIcons}>
-                        <a href="#">
-                            <img src={instagram} />
-                        </a>
-                        <a href="#">
-                            <img src={paperPLane} />
-                        </a>
-                        <a href="#">
-                            <img src={whatsApp} />
-                        </a>
+                        <Link href="#">
+                            <img src={instagram} alt="instagram" />
+                        </Link>
+                        <Link href="#">
+                            <img src={paperPLane} alt="paperPLane" />
+                        </Link>
+                        <Link href="#">
+                            <img src={whatsApp} alt="whatsApp" />
+                        </Link>
                     </div>
                 </div>
             </div>

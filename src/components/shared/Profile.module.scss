@@ -83,7 +83,6 @@ body {
   .history,
   .connection {
     border-radius: 15px;
-    min-width: 400px;
     background-color: rgba(255, 255, 255, 0.4);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
@@ -94,7 +93,20 @@ body {
 }
 
 .profile {
+  width: 400px;
   padding: 0 30px;
+  animation: animateProfile 2s;
+
+  @keyframes animateProfile {
+    0% {
+      opacity: 0;
+      transform: translateX(-120px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
   .profileUser {
     overflow: hidden;
@@ -167,6 +179,20 @@ body {
 }
 
 .history {
+  width: 400px;
+  animation: animateHsitory 2s;
+
+  @keyframes animateHsitory {
+    0% {
+      opacity: 0;
+      transform: translateX(120px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
   .headHistory {
     display: flex;
     justify-content: space-between;
@@ -188,7 +214,7 @@ body {
   }
 
   .firstInformation {
-    padding: 30px 30px 30px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
 
@@ -240,6 +266,21 @@ body {
 }
 
 .connection {
+  width: 400px;
+  animation: animateConnection 2s;
+  animation-duration: 3s;
+
+  @keyframes animateConnection {
+    0% {
+      opacity: 0;
+      transform: translateX(120px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
   .headInformation {
     display: flex;
     justify-content: space-between;
@@ -289,6 +330,46 @@ body {
     .receiveLink {
       padding: 3px 20px;
       cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .profile {
+    width: 295px;
+
+    .profileUser img {
+      height: 200px;
+    }
+
+    .numberUser {
+      flex-direction: column;
+    }
+  }
+
+  .history {
+    width: 280px;
+    margin: 0 auto !important;
+
+    .firstInformation .items {
+      flex-direction: column;
+      margin: 10px 0;
+      align-items: stretch;
+
+      .receiveLink,
+      .acceptLink {
+        width: 140px;
+        margin-left: auto;
+        text-align: center;
+      }
+    }
+  }
+
+  .connection {
+    width: 295px;
+
+    .secondInformation .mainInformation {
+      padding: 30px 15px 10px !important;
     }
   }
 }

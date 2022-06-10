@@ -20,13 +20,14 @@
 }
 
 .headerLeft {
-  height: 100%;
+  width: 200px;
+  height: 40px;
   display: flex;
   align-items: center;
 
   .headLogo {
-    width: 200px;
-    height: 40px;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -70,7 +71,7 @@
   .navbarCollapse {
     padding: 7px 0;
   }
-  
+
   .listNavBar li {
     margin: 5px 0;
   }
@@ -78,5 +79,18 @@
   .listNavBar .itemNavBar:hover::before {
     opacity: 1;
     width: 20%;
+  }
+}
+
+@media (max-width: 991px) {
+  .listNavBar {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 576px) {
+  .headerLeft {
+    width: 150px !important;
+    height: 30px !important;
   }
 }
