@@ -22,13 +22,13 @@ const Profile = () => {
                 </div>
                 <div className={styles.aboutUser}>
                     <p>My Profile</p>
-                    <p>Iran, tehran, azadi</p>
+                    <p>Iran, tehran</p>
                 </div>
                 <div className={styles.numberUser}>
-                    <p>Sina Mohammadi</p>
-                    <p>+98 912 345 6789</p>
+                    <p>Ehsan Ahmadi</p>
+                    <p>+98 921 382 8456</p>
                 </div>
-                <p className={styles.emailUser}>@sinamohammadi83@gmail.com</p>
+                <p className={styles.emailUser}>@ehsanahmadi8338@gmail.com</p>
                 <div className={styles.smsProfile}>
                     <p>SMS alerts activations</p>
                     <img className={styles.available} src={check} alt="" />

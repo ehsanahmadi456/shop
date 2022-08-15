@@ -4,6 +4,7 @@
 .container {
   max-width: 1400px;
   margin: 70px auto 0;
+  min-height: 80vh;
 
   .bannerMain {
     display: flex;
@@ -25,6 +26,7 @@
 
   .sliderBrands {
     margin: 85px 20px;
+    cursor: pointer;
 
     img {
       margin: 0 auto;
